@@ -1,5 +1,7 @@
 
+import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Sets are unordered collections of elements. Sets do not allow duplicates.
@@ -19,8 +21,11 @@ public class Lab {
      * Some common implementations of Set are HashSet and TreeSet. Look into how to instantiate them.
      * @return a new Set<Integer> object.
      */
+
+    
     public Set<Integer> createSet(){
-        return null;
+        Set<Integer> set = new TreeSet<Integer>();
+        return set;
     }
 
     /**
@@ -29,7 +34,7 @@ public class Lab {
      * @return the size of set. (number of values)
      */
     public int getSize(Set<Integer> set){
-        return 0;
+        return set.size();
     }
 
     /**
@@ -39,6 +44,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addUniqueItem(Set<Integer> set, int item){
+        set.add(item);
 
     }
 
@@ -49,6 +55,6 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeItem(Set<Integer> set, int item){
-
+        set.remove(item);
     }
 }
